@@ -10,7 +10,7 @@ import safepo.common.mpi_tools as mpi_tools
 class RCPO(PG, Lagrangian):
     def __init__(
             self,
-            algo='ppo-lag',
+            algo='rcpo',
             cost_limit=25.,
             lagrangian_multiplier_init=0.,
             vf_lr=0.0015,

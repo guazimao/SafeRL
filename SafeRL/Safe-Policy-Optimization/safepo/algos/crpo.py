@@ -10,7 +10,7 @@ import safepo.common.mpi_tools as mpi_tools
 class CRPO(PG):
     def __init__(
             self,
-            algo='ppo-lag',
+            algo='crpo',
             cost_limit=25.,
             use_cost_value_function=True,
             **kwargs

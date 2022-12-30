@@ -13,7 +13,7 @@ defaults:
         - 64
       activation: tanh
   adv_estimation_method: gae
-  epochs: 200
+  epochs: 100
   gamma: 0.99
   steps_per_epoch: 30000
   use_exploration_noise_anneal: True
