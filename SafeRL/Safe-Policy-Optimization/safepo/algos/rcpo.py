@@ -48,7 +48,7 @@ class RCPO(PG, Lagrangian):
         ratio = torch.exp(_log_p - data['log_p'])
         rewards = []
         R = 0
-        lagrangian_multiplier = self.lagrangian_multiplier
+        lagrangian_multiplier = self.lagrangian_multiplier.item()
         for i in range(len(data['rew']) - 1, -1, -1):
             r = data['rew'][i]
             c = data['cost_adv'][i]
@@ -115,7 +115,7 @@ class RCPO(PG, Lagrangian):
     def update_value_net(self, data: dict) -> None:
         rewards = []
         R = 0
-        lagrangian_multiplier = self.lagrangian_multiplier
+        lagrangian_multiplier = self.lagrangian_multiplier.item()
         for i in range(len(data['rew']) - 1, -1, -1):
             r = data['rew'][i]
             c = data['cost_adv'][i]

@@ -9,7 +9,7 @@ class PDO(PG, Lagrangian):
                  algo="pdo",
                  cost_limit=25.,
                  lagrangian_multiplier_init=0.001,
-                 lambda_lr=0.035,
+                 lambda_lr=0.032,
                  lambda_optimizer='Adam',
                  use_cost_value_function=True,
                  **kwargs):
